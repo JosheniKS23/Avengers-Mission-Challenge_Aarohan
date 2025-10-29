@@ -1,6 +1,3 @@
-# 🛡 Avengers: Mission Control - Round 4 (Holographic Edition)
-# Prerequisite: pip install customtkinter
-# Optional: Place a shield.png image in the same folder for completion screen
 
 import customtkinter as ctk
 import random, math, threading, csv, os
@@ -230,12 +227,12 @@ class AvengersApp(ctk.CTk):
                     q["final"])
         if ans == expected.upper():
             play_tone(1000, 150)
-            messagebox.showinfo("Correct", "✅ Correct! Moving ahead.")
+            messagebox.showinfo("Correct", "Correct! Moving ahead.")
             self.stage_results[self.current_stage] = "Correct"
             self.next_stage()
         else:
             play_tone(600, 80)
-            messagebox.showwarning("Incorrect", "❌ Incorrect. Try again or skip.")
+            messagebox.showwarning("Incorrect", "Incorrect. Try again or skip.")
 
     def skip_stage(self):
         play_tone(500, 60)
@@ -281,7 +278,7 @@ class AvengersApp(ctk.CTk):
                      font=("Arial", 18), text_color="#d1d5db").pack(pady=5)
         ctk.CTkLabel(frame, text=f"Results: {self.stage_results}",
                      font=("Arial", 16), text_color="#45a29e").pack(pady=10)
-        ctk.CTkLabel(frame, text=f"Data saved to mission_log.csv ✅",
+        ctk.CTkLabel(frame, text=f"Data saved to mission_log.csv !",
                      font=("Arial", 14), text_color="#66fcf1").pack(pady=10)
         ctk.CTkButton(frame, text="Play Again", fg_color="#45a29e", hover_color="#66fcf1",
                       command=self.show_team_entry).pack(pady=20)
@@ -292,3 +289,4 @@ class AvengersApp(ctk.CTk):
 # ----------------------------- RUN APP -----------------------------
 if __name__ == "__main__":
     AvengersApp().mainloop()
+
