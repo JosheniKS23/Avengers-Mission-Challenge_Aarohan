@@ -15,7 +15,7 @@ ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("dark-blue")
 
 # ----------------------------- CONFIG -----------------------------
-TIME_LIMITS = {1:150, 2:120, 3:90, 4:90}
+TIME_LIMITS = {1:300, 2:300, 3:300, 4:300}
 POINTS_PER_STAGE = {1:40, 2:30, 3:20, 4:10}
 
 # ----------------------------- QUESTION SETS -----------------------------
@@ -289,4 +289,5 @@ class AvengersApp(ctk.CTk):
 # ----------------------------- RUN APP -----------------------------
 if __name__ == "__main__":
     AvengersApp().mainloop()
+
 
